@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Animation</title>
+    <link rel="stylesheet" href="{% static 'home_page/styles.css' %}">
+</head>
+<body>
+
+    <p> No comments, only hearts. </p>
+    <button id="heartButton">Click here to leave a Heart</button>
+    <div id="counter">Hearts Clicked: 0</div>
+    <script src="{% static 'home_page/script.js' %}"></script>
+</body>
+</html>

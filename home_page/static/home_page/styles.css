@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+
+
+p {
+    color: red;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #333;
+  }
+
+
+
+#counter {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #333;
+}
+
+#heartButton {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff6b81;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+#heartButton:hover {
+    background-color: #ff4757;
+
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    transform: rotate(45deg); /* Rotate to create the heart shape */
+    animation: fly 2s ease-in forwards;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -10px;
+    left: 0;
+}
+
+.heart:after {
+    left: 10px;
+    top: 0;
+}
+
+@keyframes fly {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotate(-45deg); /* Counter-rotate to make the heart upright */
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) rotate(-45deg); /* Maintain counter-rotation */
+    }
+}
