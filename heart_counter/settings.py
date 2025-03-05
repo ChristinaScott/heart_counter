@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home_page'
+    'home_page', 
+    'hearts_collector'
 ]
 
 MIDDLEWARE = [
@@ -76,8 +77,12 @@ WSGI_APPLICATION = 'heart_counter.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'heart_db',
+        'USER': 'heart_db_user',  # Replace with your PostgreSQL username
+        'PASSWORD': 'REDACTED',  # Replace with your PostgreSQL password
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
