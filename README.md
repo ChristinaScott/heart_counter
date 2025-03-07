@@ -1,4 +1,4 @@
-# Heart Counter Django Project
+# 3 Tier Heart Counter Django Project
 
 This project is a simple Django web application that demonstrates a heart counter. Users can click a heart button to increment a counter, and the count is persisted using a PostgreSQL database.
 
